@@ -3,9 +3,10 @@ module github.com/bryandph/victron-vedirect
 go 1.21.0
 
 require (
+	github.com/bryandph/victron-vedirect/vedirect-device v0.0.0-20230831101505-0cd10e086991
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.25.7
-	go.bug.st/serial v1.3.3
+	go.bug.st/serial v1.6.0
 )
 
 require (
