@@ -4,7 +4,8 @@ This project implements a CLI to get status information from a [Victron VE Direc
 
 #### Usage
 
-```
+```shell
+$./vedirect-status
 NAME:
    vedirect-status - Get serial output from an attached Victron VEDirect device and output in JSON format
 
@@ -21,7 +22,7 @@ GLOBAL OPTIONS:
 ```
 
 Example Output ([BlueSolar MPPT 75/10](https://www.victronenergy.com/solar-charge-controllers/mppt7510))
-```
+```json
 {
     "label": {
         "CS": {
