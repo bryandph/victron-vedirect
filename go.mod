@@ -1,4 +1,4 @@
-module github.com/bryandph/victron-vedirect
+module github.com/bryandph/victron-vedirect/v0.6.0
 
 go 1.21.0
 
