@@ -1,5 +1,5 @@
-github.com/bryandph/victron-vedirect/vedirect-device v0.0.0-20230831101505-0cd10e086991 h1:5wRcMGRt7DWCdD4VvViKkzSvjsH1lDgcWlj+jj+Yf8Y=
-github.com/bryandph/victron-vedirect/vedirect-device v0.0.0-20230831101505-0cd10e086991/go.mod h1:7l1PAK0WWH64wnkXddtNHXmePbp8ma7pHWuJ7pVFAM8=
+github.com/bryandph/victron-vedirect/vedirect-device v0.0.0-20230831103103-b88d89c48f85 h1:s7kFE2DvQ1j/Go+Ink0st1tgWO8+AlzOdGc/c4uNVpE=
+github.com/bryandph/victron-vedirect/vedirect-device v0.0.0-20230831103103-b88d89c48f85/go.mod h1:7l1PAK0WWH64wnkXddtNHXmePbp8ma7pHWuJ7pVFAM8=
 github.com/cpuguy83/go-md2man/v2 v2.0.2 h1:p1EgwI/C7NhT0JmVkwCD2ZBK8j4aeHQX2pMHHBfMQ6w=
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/creack/goselect v0.1.2 h1:2DNy14+JPjRBgPzAd1thbQp4BSIihxcBf0IXhQXDRa0=

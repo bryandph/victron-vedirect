@@ -25,12 +25,14 @@ func newVedirectBlock(text string) *VedirectBlock {
 	block.Label = make(map[string]VedirectField)
 	for _, raw_field := range fields {
 		raw_fields := strings.Fields(raw_field)
-		if len(raw_fields) > 0 {
+		if len(raw_fields) == 2 {
 			block.Label[raw_fields[0]] = VedirectField{
 				Value:       raw_fields[1],
 				Unit:        vedirectRefData[raw_fields[0]][0],
 				Description: vedirectRefData[raw_fields[0]][1],
 			}
+		} else {
+			log.WithField("field", raw_field).Warn("Failed to parse field")
 		}
 	}
 
@@ -57,6 +59,9 @@ func (veblock VedirectBlock) ToJson() []byte {
 }
 
 func (vefield VedirectField) AsFloat() float64 {
+	if vefield.Value == nil {
+		return float64(0)
+	}
 	if vefield.Value.(string) == "ON" {
 		return float64(1)
 	}
@@ -65,7 +70,7 @@ func (vefield VedirectField) AsFloat() float64 {
 	}
 	f, err := strconv.ParseFloat(vefield.Value.(string), 64)
 	if err != nil {
-		log.Fatal(err)
+		log.WithField("field", vefield.Value).Warn(err)
 	}
 	return f
 }
