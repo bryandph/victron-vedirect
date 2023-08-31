@@ -2,6 +2,7 @@ package vedirect
 
 import (
 	"encoding/json"
+	"strconv"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
@@ -53,4 +54,18 @@ func (veblock VedirectBlock) ToJson() []byte {
 		log.WithFields(log.Fields{"veblock": veblock}).Panicf("Failed to marshal JSON from input: %s", err)
 	}
 	return json
+}
+
+func (vefield VedirectField) AsFloat() float64 {
+	if vefield.Value.(string) == "ON" {
+		return float64(1)
+	}
+	if vefield.Value.(string) == "OFF" {
+		return float64(0)
+	}
+	f, err := strconv.ParseFloat(vefield.Value.(string), 64)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return f
 }
